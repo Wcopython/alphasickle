@@ -7,12 +7,13 @@ Author: Moses
 E-mail: 8342537@qq.com
 """
 import os
+from functools import reduce
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
-from functools import reduce
 from single_factor_test import panel_to_matrix
 
 sns.set(style="darkgrid")

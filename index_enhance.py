@@ -6,15 +6,16 @@ Project: alphasickle
 Author: Moses
 E-mail: 8342537@qq.com
 """
-import re
 import os
+import re
+from functools import reduce
+from collections import defaultdict
+from copy import deepcopy
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from functools import reduce
-from collections import defaultdict
-from copy import deepcopy
 from scipy.optimize import linprog
 from factor_generate import FactorGenerater
 from factor_preprocess import info_cols
@@ -30,7 +31,7 @@ plt.rcParams['figure.figsize'] = (16.0, 9.0)  #图片尺寸设定（宽 * 高 cm
 plt.rcParams['font.size'] = 15                #字体大小
 
 #工作目录，存放代码
-work_dir = os.path.dirname(os.path.dirname(__file__))
+work_dir = os.path.dirname(__file__)
 #经过预处理后的因子截面数据存放目录
 factor_panel_path = os.path.join(work_dir, '因子预处理模块', '因子（已预处理）')
 #原始经过预处理的因子的矩阵数据存放目录

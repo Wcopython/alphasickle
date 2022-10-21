@@ -7,6 +7,7 @@ Author: Moses
 E-mail: 8342537@qq.com
 """
 import os
+
 import numpy as np
 import pandas as pd
 import tushare as ts
